@@ -23,11 +23,12 @@
         android:id="@+id/model"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="enter the car model"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/brand"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/brand"
         app:layout_constraintTop_toBottomOf="@+id/brand" />
 
@@ -35,11 +36,12 @@
         android:id="@+id/price"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="88dp"
+        android:layout_marginTop="44dp"
         android:ems="10"
         android:hint="enter the car price"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/model"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/model"
         app:layout_constraintTop_toBottomOf="@+id/model" />
 
@@ -51,6 +53,33 @@
         android:text="Save Car"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.479"
         app:layout_constraintStart_toStartOf="@+id/price"
-        app:layout_constraintTop_toBottomOf="@+id/price" />
+        app:layout_constraintTop_toBottomOf="@+id/price"
+        app:layout_constraintVertical_bias="0.101" />
+
+    <TextView
+        android:id="@+id/txtData"
+        android:layout_width="366dp"
+        android:layout_height="wrap_content"
+        android:background="#EDE389"
+        android:hint="get data from server"
+        android:textSize="30sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/price"
+        app:layout_constraintHorizontal_bias="0.516"
+        app:layout_constraintStart_toStartOf="@+id/price"
+        app:layout_constraintTop_toBottomOf="@+id/saveButton"
+        app:layout_constraintVertical_bias="0.166" />
+
+    <Button
+        android:id="@+id/allData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="#B2ECDE"
+        android:text="Get All Data"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/txtData"
+        app:layout_constraintStart_toStartOf="@+id/txtData"
+        app:layout_constraintTop_toBottomOf="@+id/txtData" />
 </androidx.constraintlayout.widget.ConstraintLayout>
