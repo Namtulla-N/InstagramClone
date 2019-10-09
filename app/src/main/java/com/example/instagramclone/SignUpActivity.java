@@ -28,12 +28,14 @@ public class SignUpActivity extends AppCompatActivity {
     private TextView txtData;
     private Button allData;
     private String allBil;
+    private Button btnTransition;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sign_up);
 
+        btnTransition=findViewById(R.id.btnTransition);
         allData=findViewById(R.id.allData);
         brand=findViewById(R.id.brand);
         model=findViewById(R.id.model);
@@ -70,6 +72,7 @@ public class SignUpActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 ParseQuery<ParseObject> queryAll=ParseQuery.getQuery("Bil");
+                queryAll.whereGreaterThan("Price","400000");
                 queryAll.findInBackground(new FindCallback<ParseObject>() {
                     @Override
                     public void done(List<ParseObject> objects, ParseException e) {
@@ -96,6 +99,17 @@ public class SignUpActivity extends AppCompatActivity {
                 });
             }
         });
+
+
+        btnTransition.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+            }
+        });
+
+
+
 
 
     }
